@@ -1,0 +1,241 @@
+/* RESPONSIVE TABLET START */
+@media (min-width: 768px) {
+    /* HERO SECTION TABLET START */
+    .sugiana_hero_content h1 {
+        font-size: 3rem;
+        max-width: 620px;
+    }
+
+    .sugiana_hero_image_card {
+        height: 380px;
+    }
+    /* HERO SECTION TABLET END */
+
+
+    /* PILIHAN TAMU (FEATURED MENU) TABLET START */
+    .sugiana_section_header_row {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .sugiana_menu_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* PILIHAN TAMU (FEATURED MENU) TABLET END */
+
+
+    /* EDITORIAL STORY SECTION TABLET START */
+    .sugiana_story_grid {
+        padding: 2.5rem;
+    }
+
+    .sugiana_story_visual {
+        height: 360px;
+    }
+    /* EDITORIAL STORY SECTION TABLET END */
+
+
+    /* LOKASI & SUDUT RUANG TABLET START */
+    .sugiana_spots_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* LOKASI & SUDUT RUANG TABLET END */
+
+
+    /* HALAMAN TENTANG KAMI TABLET START */
+    .sugiana_about_intro h1 {
+        font-size: 2.8rem;
+    }
+
+    .sugiana_about_banner {
+        height: 330px;
+    }
+
+    .sugiana_about_stats {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: -3.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        border-radius: 15px;
+    }
+
+    /* ZIG-ZAG NARRATIVE */
+    .sugiana_narrative_img {
+        height: 330px;
+    }
+
+    /* INTERACTIVE TIMELINE */
+    .sugiana_timeline_panel {
+        padding: 2.2rem;
+    }
+
+    /* TEAM ROSTER */
+    .sugiana_team_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* HALAMAN TENTANG KAMI TABLET END */
+
+
+    /* HALAMAN MENU TABLET START */
+    .sugiana_menu_headline h1 {
+        font-size: 2.75rem;
+    }
+
+    article.sugiana_spotlight_card {
+        grid-template-columns: 240px 1fr;
+        padding: 1.2rem;
+    }
+
+    .sugiana_spotlight_img {
+        height: 230px;
+    }
+
+    .sugiana_catalog_tools {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sugiana_search_wrap {
+        width: 260px;
+    }
+
+    .sugiana_catalog_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    article.sugiana_dish_card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sugiana_dish_thumb {
+        width: 100%;
+    }
+
+    .sugiana_beans_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sugiana_bean_card {
+        grid-column: span 2;
+    }
+
+    /* Hanya rata tengah jika kartu terakhir berada di urutan ganjil (1, 3, 5, ...) */
+    .sugiana_bean_card:last-child:nth-child(odd) {
+        grid-column: 2 / 4;
+    }
+    /* HALAMAN MENU TABLET END */
+
+
+    /* HALAMAN GALERI TABLET START */
+    .sugiana_gallery_intro h1 {
+        font-size: 2.75rem;
+    }
+
+    .sugiana_mosaic_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    figure.sugiana_mosaic_card.sugiana_mosaic_tall {
+        grid-column: span 2;
+        height: 270px;
+    }
+
+    figure.sugiana_mosaic_card.sugiana_mosaic_wide {
+        grid-column: span 2;
+        height: 235px;
+    }
+
+    .sugiana_archive_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* HALAMAN GALERI TABLET END */
+
+
+    /* HALAMAN TESTIMONI TABLET START */
+    .sugiana_testi_intro h1 {
+        font-size: 2.75rem;
+    }
+
+    article.sugiana_spotlight_quote_card {
+        grid-template-columns: 280px 1fr;
+        padding: 1.5rem;
+    }
+
+    .sugiana_testi_filter_bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sugiana_masonry_wall {
+        column-count: 2;
+    }
+
+    .sugiana_testi_form_split {
+        padding: 2.4rem;
+    }
+    /* HALAMAN TESTIMONI TABLET END */
+
+
+    /* HALAMAN PROMO TABLET START */
+    .sugiana_promo_intro h1 {
+        font-size: 2.75rem;
+    }
+
+    .sugiana_vouchers_toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sugiana_voucher_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sugiana_simulator_box {
+        padding: 2.3rem;
+    }
+    /* HALAMAN PROMO TABLET END */
+
+
+    /* HALAMAN KONTAK TABLET START */
+    .sugiana_contact_intro h1 {
+        font-size: 2.75rem;
+    }
+
+    .sugiana_channel_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sugiana_zone_card,
+    .sugiana_booking_card {
+        padding: 2.2rem;
+    }
+
+    .sugiana_form_row_2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sugiana_map_frame {
+        height: 330px;
+    }
+    /* HALAMAN KONTAK TABLET END */
+
+
+    /* FOOTER TABLET START */
+    .sugiana_footer_links_wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sugiana_footer_bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* FOOTER TABLET END */
+
+}
+/* RESPONSIVE TABLET END */

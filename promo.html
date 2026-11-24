@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINK FAVIOCON -->
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+
+    <!-- LINK GOOGLE FONTS (SERIF PLAYFAIR DISPLAY & SANS-SERIF POPPINS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS RESPONSIVE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tablet.css">
+    <link rel="stylesheet" href="assets/css/laptop.css">
+    <link rel="stylesheet" href="assets/css/desktop.css">
+
+    <!-- LINK LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>SEGI Coffee — Promo & Penawaran</title>
+</head>
+<body>
+
+    <!-- NAVBAR START -->
+    <header class="sugiana_header" id="sugiana_header">
+        <nav class="sugiana_navbar" id="sugiana_navbar">
+            <a href="index.html" class="sugiana_navbar_logo">
+                <span class="sugiana_logo_grid">
+                    <span></span>
+                    <span class="sugiana_logo_accent"></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                SEGI
+            </a>
+
+            <div class="sugiana_navbar_nav" id="sugiana_navbar_nav">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="menu.html">Menu</a>
+                <a href="galeri.html">Galeri</a>
+                <a href="testimoni.html">Testimoni</a>
+                <a href="promo.html" class="sugiana_active">Promo</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+
+            <div class="sugiana_navbar_extra">
+                <a href="kontak.html" class="sugiana_btn_reservasi">Reservasi</a>
+
+                <button type="button" class="sugiana_burger_menu" id="sugiana_burger_menu" aria-label="Buka Navigasi">
+                    <span class="sugiana_line_1"></span>
+                    <span class="sugiana_line_2"></span>
+                    <span class="sugiana_line_3"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- NAVBAR END -->
+
+    <!-- PROMO HERO & FEATURED TICKET PASS START -->
+    <section class="sugiana_promo_hero" id="sugiana_promo_hero">
+        <div class="sugiana_promo_container">
+            <div class="sugiana_promo_intro">
+                <span class="sugiana_eyebrow">PENAWARAN SPESIAL SEGI</span>
+                <h1>Apresiasi Hangat untuk Setiap Kunjungan.</h1>
+                <p>Salin kode voucher di bawah ini dan tunjukkan kepada barista kami di kasir untuk menikmati potongan harga seduhan harian maupun paket bundling.</p>
+            </div>
+
+            <!-- FEATURED BOARDING PASS CARD -->
+            <article class="sugiana_featured_pass">
+                <div class="sugiana_pass_visual">
+                    <img src="assets/image/sugiana-menu-38.jpg" alt="Promo Morning Flow SEGI Coffee">
+                    <span class="sugiana_pass_ribbon">PENAWARAN UTAMA</span>
+                </div>
+
+                <div class="sugiana_pass_details">
+                    <span class="sugiana_eyebrow">MORNING FLOW PRIVILEGE</span>
+                    <h2>Hemat 25% Semua Sajian Espresso & Pastry Pagi</h2>
+                    <p>Awali hari lebih tenang di SEGI Coffee. Berlaku untuk pemesanan di tempat maupun dibawa pulang setiap pukul 08.00 – 11.00 WIB.</p>
+
+                    <div class="sugiana_countdown_wrap" aria-label="Sisa waktu promo hari ini">
+                        <div class="sugiana_cd_box">
+                            <strong id="sugiana_cd_hours">06</strong>
+                            <span>Jam</span>
+                        </div>
+                        <div class="sugiana_cd_box">
+                            <strong id="sugiana_cd_mins">45</strong>
+                            <span>Menit</span>
+                        </div>
+                        <div class="sugiana_cd_box">
+                            <strong id="sugiana_cd_secs">30</strong>
+                            <span>Detik</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sugiana_pass_stub">
+                    <span class="sugiana_stub_label">KODE VOUCHER</span>
+                    <strong class="sugiana_stub_code">SEGIPAGI25</strong>
+                    <span class="sugiana_stub_valid">Berlaku s.d. 30 Nov 2026</span>
+                    <button type="button" class="sugiana_btn_primary sugiana_copy_code_btn" data-code="SEGIPAGI25">
+                        <i data-lucide="copy"></i>
+                        <span>Salin Kode</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- PROMO HERO & FEATURED TICKET PASS END -->
+
+    <!-- VOUCHER TICKETS CATALOG START -->
+    <section class="sugiana_vouchers_section" id="sugiana_vouchers_section">
+        <div class="sugiana_promo_container">
+
+            <div class="sugiana_vouchers_toolbar">
+                <div class="sugiana_promo_tabs">
+                    <button type="button" class="sugiana_promo_tab_btn sugiana_promo_tab_active" data-promo-cat="all">Semua Promo</button>
+                    <button type="button" class="sugiana_promo_tab_btn" data-promo-cat="harian">Seduhan Harian</button>
+                    <button type="button" class="sugiana_promo_tab_btn" data-promo-cat="bundling">Paket Bundling</button>
+                    <button type="button" class="sugiana_promo_tab_btn" data-promo-cat="roastery">Biji & Member</button>
+                </div>
+                <span class="sugiana_promo_toast" id="sugiana_promo_toast">Klik tombol Salin Kode untuk menyalin voucher.</span>
+            </div>
+
+            <div class="sugiana_voucher_grid" id="sugiana_voucher_grid">
+
+                <!-- VOUCHER 1 -->
+                <article class="sugiana_voucher_card" data-promo-cat="bundling">
+                    <div class="sugiana_voucher_top">
+                        <div class="sugiana_voucher_badge_row">
+                            <span class="sugiana_voucher_tag">Paket Bundling</span>
+                            <span class="sugiana_voucher_off">Hemat Rp 12.000</span>
+                        </div>
+                        <h3>Duo Workday Set</h3>
+                        <p>2 Gelas Kopi Susu Aren Segi + 1 Butter Croissant Artisan untuk menemani sesi kerja berdua.</p>
+                    </div>
+                    <div class="sugiana_voucher_divider"></div>
+                    <div class="sugiana_voucher_bottom">
+                        <div>
+                            <span class="sugiana_code_caption">Kode Promo</span>
+                            <strong class="sugiana_code_text">DUOSEGI12</strong>
+                        </div>
+                        <button type="button" class="sugiana_copy_pill_btn sugiana_copy_code_btn" data-code="DUOSEGI12">
+                            <i data-lucide="copy"></i>
+                            <span>Salin</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- VOUCHER 2 -->
+                <article class="sugiana_voucher_card" data-promo-cat="harian">
+                    <div class="sugiana_voucher_top">
+                        <div class="sugiana_voucher_badge_row">
+                            <span class="sugiana_voucher_tag">Seduhan Harian</span>
+                            <span class="sugiana_voucher_off">Diskon 20%</span>
+                        </div>
+                        <h3>Slow Bar Afternoon</h3>
+                        <p>Nikmati potongan 20% untuk seluruh pilihan V60 Arabika Priangan dan Japanese Iced Filter pukul 14.00 – 17.00 WIB.</p>
+                    </div>
+                    <div class="sugiana_voucher_divider"></div>
+                    <div class="sugiana_voucher_bottom">
+                        <div>
+                            <span class="sugiana_code_caption">Kode Promo</span>
+                            <strong class="sugiana_code_text">SLOWBAR20</strong>
+                        </div>
+                        <button type="button" class="sugiana_copy_pill_btn sugiana_copy_code_btn" data-code="SLOWBAR20">
+                            <i data-lucide="copy"></i>
+                            <span>Salin</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- VOUCHER 3 -->
+                <article class="sugiana_voucher_card" data-promo-cat="roastery">
+                    <div class="sugiana_voucher_top">
+                        <div class="sugiana_voucher_badge_row">
+                            <span class="sugiana_voucher_tag">Biji & Member</span>
+                            <span class="sugiana_voucher_off">Diskon 15%</span>
+                        </div>
+                        <h3>Home Brewer Beans</h3>
+                        <p>Potongan 15% pembelian kemasan roasted beans 250gr (Galunggung Washed atau Cikuray Natural) + gratis giling.</p>
+                    </div>
+                    <div class="sugiana_voucher_divider"></div>
+                    <div class="sugiana_voucher_bottom">
+                        <div>
+                            <span class="sugiana_code_caption">Kode Promo</span>
+                            <strong class="sugiana_code_text">ROASTWEEK15</strong>
+                        </div>
+                        <button type="button" class="sugiana_copy_pill_btn sugiana_copy_code_btn" data-code="ROASTWEEK15">
+                            <i data-lucide="copy"></i>
+                            <span>Salin</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- VOUCHER 4 -->
+                <article class="sugiana_voucher_card" data-promo-cat="harian">
+                    <div class="sugiana_voucher_top">
+                        <div class="sugiana_voucher_badge_row">
+                            <span class="sugiana_voucher_tag">Seduhan Harian</span>
+                            <span class="sugiana_voucher_off">Gratis Upgrade</span>
+                        </div>
+                        <h3>Oat Milk Switch</h3>
+                        <p>Gratis penggantian susu segar ke Oat Milk nabati untuk setiap pemesanan Artisan Cappuccino atau Uji Matcha Latte.</p>
+                    </div>
+                    <div class="sugiana_voucher_divider"></div>
+                    <div class="sugiana_voucher_bottom">
+                        <div>
+                            <span class="sugiana_code_caption">Kode Promo</span>
+                            <strong class="sugiana_code_text">SEGIOATFREE</strong>
+                        </div>
+                        <button type="button" class="sugiana_copy_pill_btn sugiana_copy_code_btn" data-code="SEGIOATFREE">
+                            <i data-lucide="copy"></i>
+                            <span>Salin</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- VOUCHER 5 -->
+                <article class="sugiana_voucher_card" data-promo-cat="bundling">
+                    <div class="sugiana_voucher_top">
+                        <div class="sugiana_voucher_badge_row">
+                            <span class="sugiana_voucher_tag">Paket Bundling</span>
+                            <span class="sugiana_voucher_off">Harga Spesial Rp 42K</span>
+                        </div>
+                        <h3>Matcha & Croissant Pair</h3>
+                        <p>Kombinasi Uji Matcha Oat Latte dingin dan 1 Butter Croissant hangat dari harga normal Rp 53.000.</p>
+                    </div>
+                    <div class="sugiana_voucher_divider"></div>
+                    <div class="sugiana_voucher_bottom">
+                        <div>
+                            <span class="sugiana_code_caption">Kode Promo</span>
+                            <strong class="sugiana_code_text">MATCHAPAIR</strong>
+                        </div>
+                        <button type="button" class="sugiana_copy_pill_btn sugiana_copy_code_btn" data-code="MATCHAPAIR">
+                            <i data-lucide="copy"></i>
+                            <span>Salin</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- VOUCHER 6 -->
+                <article class="sugiana_voucher_card" data-promo-cat="roastery">
+                    <div class="sugiana_voucher_top">
+                        <div class="sugiana_voucher_badge_row">
+                            <span class="sugiana_voucher_tag">Biji & Member</span>
+                            <span class="sugiana_voucher_off">Diskon 15%</span>
+                        </div>
+                        <h3>Campus Study Pass</h3>
+                        <p>Tunjukkan kartu tanda mahasiswa aktif saat transaksi di kasir untuk mendapatkan potongan 15% semua minuman.</p>
+                    </div>
+                    <div class="sugiana_voucher_divider"></div>
+                    <div class="sugiana_voucher_bottom">
+                        <div>
+                            <span class="sugiana_code_caption">Kode Promo</span>
+                            <strong class="sugiana_code_text">SEGIKAMPUS</strong>
+                        </div>
+                        <button type="button" class="sugiana_copy_pill_btn sugiana_copy_code_btn" data-code="SEGIKAMPUS">
+                            <i data-lucide="copy"></i>
+                            <span>Salin</span>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <!-- VOUCHER TICKETS CATALOG END -->
+
+    <!-- PROMO SAVINGS SIMULATOR START -->
+    <section class="sugiana_simulator_sec" id="sugiana_simulator_sec">
+        <div class="sugiana_promo_container">
+            <div class="sugiana_simulator_box">
+                <div class="sugiana_simulator_info">
+                    <span class="sugiana_eyebrow">SIMULASI HEMAT</span>
+                    <h2>Hitung Potongan Vouchermu Sebelum Berkunjung</h2>
+                    <p>Pilih paket pesanan dan masukkan salah satu kode voucher SEGI untuk melihat estimasi harga setelah diskon.</p>
+
+                    <div class="sugiana_sim_controls">
+                        <div class="sugiana_form_field">
+                            <label for="sugiana_sim_bundle">Pilih Paket Pesanan</label>
+                            <select id="sugiana_sim_bundle">
+                                <option value="70000">Duo Workday Set (2 Kopi Susu Aren + 1 Croissant) — Rp 70.000</option>
+                                <option value="53000">Matcha & Croissant Pair (Matcha Oat + Croissant) — Rp 53.000</option>
+                                <option value="56000">2x V60 Arabika Priangan (Slow Bar) — Rp 56.000</option>
+                                <option value="95000">Kemasan Roasted Beans Galunggung 250gr — Rp 95.000</option>
+                            </select>
+                        </div>
+
+                        <div class="sugiana_form_field">
+                            <label for="sugiana_sim_code">Masukkan / Pilih Kode Promo</label>
+                            <div class="sugiana_sim_input_row">
+                                <input type="text" id="sugiana_sim_code" value="SEGIPAGI25" placeholder="Contoh: SEGIPAGI25">
+                                <button type="button" class="sugiana_btn_primary" id="sugiana_apply_sim_btn">Terapkan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sugiana_simulator_receipt">
+                    <span class="sugiana_receipt_title">RINGKASAN ESTIMASI</span>
+                    <div class="sugiana_receipt_row">
+                        <span>Harga Normal</span>
+                        <strong id="sugiana_sim_normal">Rp 70.000</strong>
+                    </div>
+                    <div class="sugiana_receipt_row sugiana_receipt_discount">
+                        <span>Potongan Voucher</span>
+                        <strong id="sugiana_sim_saved">- Rp 17.500</strong>
+                    </div>
+                    <div class="sugiana_receipt_total">
+                        <span>Estimasi Bayar</span>
+                        <strong id="sugiana_sim_final">Rp 52.500</strong>
+                    </div>
+                    <p class="sugiana_sim_note" id="sugiana_sim_note">Kode <em id="sugiana_sim_applied_label">SEGIPAGI25</em> aktif: potongan 25% berhasil diterapkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROMO SAVINGS SIMULATOR END -->
+
+    <!-- PROMO TERMS ACCORDION START -->
+    <section class="sugiana_promo_faq_sec" id="sugiana_promo_faq_sec">
+        <div class="sugiana_promo_container">
+            <div class="sugiana_faq_layout">
+                <div class="sugiana_faq_intro">
+                    <span class="sugiana_eyebrow">INFORMASI PENGGUNAAN</span>
+                    <h2>Syarat & Ketentuan Voucher</h2>
+                    <p>Beberapa panduan singkat agar proses penukaran kode promo di meja kasir berjalan lancar.</p>
+                    <a href="kontak.html" class="sugiana_btn_secondary">
+                        <i data-lucide="calendar"></i>
+                        <span>Reservasi Meja Sekarang</span>
+                    </a>
+                </div>
+
+                <div class="sugiana_faq_list" id="sugiana_faq_list">
+                    <div class="sugiana_faq_item sugiana_faq_open">
+                        <button type="button" class="sugiana_faq_question">
+                            <span>Bagaimana cara menukarkan kode promo di SEGI Coffee?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="sugiana_faq_answer">
+                            <p>Cukup salin kode voucher yang diinginkan dari halaman ini dan sebutkan atau tunjukkan kepada barista kami sebelum transaksi pembayaran dilakukan di kasir.</p>
+                        </div>
+                    </div>
+
+                    <div class="sugiana_faq_item">
+                        <button type="button" class="sugiana_faq_question">
+                            <span>Apakah kode promo dapat digabungkan dengan promo lainnya?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="sugiana_faq_answer">
+                            <p>Setiap satu struk transaksi hanya dapat menggunakan satu kode promo yang berlaku agar seluruh pelanggan mendapatkan kesempatan yang sama.</p>
+                        </div>
+                    </div>
+
+                    <div class="sugiana_faq_item">
+                        <button type="button" class="sugiana_faq_question">
+                            <span>Apakah voucher berlaku untuk pemesanan takeaway?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="sugiana_faq_answer">
+                            <p>Ya, seluruh kode voucher di atas berlaku baik untuk menikmati kopi di tempat (dine-in) maupun dibawa pulang (takeaway) selama jam operasional 08.00 – 22.00 WIB.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROMO TERMS ACCORDION END -->
+
+    <!-- FOOTER START -->
+    <footer class="sugiana_footer" id="sugiana_footer">
+        <div class="sugiana_footer_container">
+            <div class="sugiana_footer_top">
+                <div class="sugiana_footer_brand">
+                    <a href="index.html" class="sugiana_navbar_logo">
+                        <span class="sugiana_logo_grid">
+                            <span></span>
+                            <span class="sugiana_logo_accent"></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        SEGI
+                    </a>
+                    <p>Pilihanmu. SEGI Coffee. Tempat kopi untuk singgah modern dengan seduhan presisi di Kota Tasikmalaya.</p>
+                </div>
+
+                <div class="sugiana_footer_links_wrap">
+                    <div class="sugiana_footer_col">
+                        <h4>Navigasi</h4>
+                        <ul>
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="tentang.html">Tentang Kami</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="galeri.html">Galeri</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sugiana_footer_col">
+                        <h4>Informasi</h4>
+                        <ul>
+                            <li><a href="testimoni.html">Testimoni</a></li>
+                            <li><a href="promo.html">Promo</a></li>
+                            <li><a href="kontak.html">Kontak & Reservasi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sugiana_footer_col">
+                        <h4>Hubungi Kami</h4>
+                        <ul>
+                            <li><a href="kontak.html"><i data-lucide="globe"></i> @segicoffee.id</a></li>
+                            <li><a href="kontak.html"><i data-lucide="mail"></i> owner@segicoffee.id</a></li>
+                            <li><a href="kontak.html"><i data-lucide="phone"></i> +62 869-8971-9222</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sugiana_footer_bottom">
+                <span>&copy; 2026 SEGI Coffee by Mochamad Sugiana. All rights reserved.</span>
+                <span>Buka Setiap Hari • 08.00 – 22.00 WIB</span>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

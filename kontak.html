@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINK FAVIOCON -->
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+
+    <!-- LINK GOOGLE FONTS (SERIF PLAYFAIR DISPLAY & SANS-SERIF POPPINS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS RESPONSIVE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tablet.css">
+    <link rel="stylesheet" href="assets/css/laptop.css">
+    <link rel="stylesheet" href="assets/css/desktop.css">
+
+    <!-- LINK LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>SEGI Coffee — Kontak & Reservasi</title>
+</head>
+<body>
+
+    <!-- NAVBAR START -->
+    <header class="sugiana_header" id="sugiana_header">
+        <nav class="sugiana_navbar" id="sugiana_navbar">
+            <a href="index.html" class="sugiana_navbar_logo">
+                <span class="sugiana_logo_grid">
+                    <span></span>
+                    <span class="sugiana_logo_accent"></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                SEGI
+            </a>
+
+            <div class="sugiana_navbar_nav" id="sugiana_navbar_nav">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="menu.html">Menu</a>
+                <a href="galeri.html">Galeri</a>
+                <a href="testimoni.html">Testimoni</a>
+                <a href="promo.html">Promo</a>
+                <a href="kontak.html" class="sugiana_active">Kontak</a>
+            </div>
+
+            <div class="sugiana_navbar_extra">
+                <a href="kontak.html" class="sugiana_btn_reservasi">Reservasi</a>
+
+                <button type="button" class="sugiana_burger_menu" id="sugiana_burger_menu" aria-label="Buka Navigasi">
+                    <span class="sugiana_line_1"></span>
+                    <span class="sugiana_line_2"></span>
+                    <span class="sugiana_line_3"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- NAVBAR END -->
+
+    <!-- CONTACT HERO & QUICK CHANNELS START -->
+    <section class="sugiana_contact_hero" id="sugiana_contact_hero">
+        <div class="sugiana_contact_container">
+            <div class="sugiana_contact_intro">
+                <div class="sugiana_status_pill" id="sugiana_status_pill">
+                    <span class="sugiana_status_dot"></span>
+                    <span id="sugiana_status_text">Buka Hari Ini • 08.00 – 22.00 WIB</span>
+                </div>
+                <span class="sugiana_eyebrow">KONTAK & RESERVASI MEJA</span>
+                <h1>Singgah, Berdiskusi, atau Amankan Mejamu.</h1>
+                <p>Rencanakan sesi kerja, pertemuan santai, maupun reservasi kelompok kecil di SEGI Coffee Tasikmalaya dengan mudah.</p>
+            </div>
+
+            <!-- 4 KARTU KANAL KONTAK CEPAT -->
+            <div class="sugiana_channel_grid">
+                <article class="sugiana_channel_card">
+                    <div class="sugiana_channel_icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3>Alamat Kedai</h3>
+                    <p>Jl. Pemuda No. 42, Kec. Tawang, Kota Tasikmalaya, Jawa Barat</p>
+                </article>
+
+                <article class="sugiana_channel_card">
+                    <div class="sugiana_channel_icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <h3>WhatsApp & Telepon</h3>
+                    <p>+62 869-8971-9222 (Respon cepat selama jam operasional)</p>
+                </article>
+
+                <article class="sugiana_channel_card">
+                    <div class="sugiana_channel_icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email & Sosial Media</h3>
+                    <p>owner@segicoffee.id • Instagram @segicoffee.id</p>
+                </article>
+
+                <article class="sugiana_channel_card">
+                    <div class="sugiana_channel_icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>Jam Operasional</h3>
+                    <p>Senin – Minggu: 08.00 – 22.00 WIB (Last Order 21.30)</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT HERO & QUICK CHANNELS END -->
+
+    <!-- INTERACTIVE ZONE & RESERVATION HUB START -->
+    <section class="sugiana_hub_section" id="sugiana_hub_section">
+        <div class="sugiana_contact_container">
+            <div class="sugiana_hub_grid">
+
+                <!-- KOLOM KIRI: EKSPLORASI ZONA MEJA INTERAKTIF -->
+                <div class="sugiana_zone_card">
+                    <span class="sugiana_eyebrow">PRATINJAU RUANG</span>
+                    <h2>Pilih Sudut Favoritmu</h2>
+                    <p>Ketuk pilihan zona di bawah ini untuk melihat suasana dan fasilitas meja sebelum melakukan reservasi.</p>
+
+                    <div class="sugiana_zone_tabs">
+                        <button type="button" class="sugiana_zone_btn sugiana_zone_active" data-zone="komunal">Meja Komunal Kerja</button>
+                        <button type="button" class="sugiana_zone_btn" data-zone="slowbar">Slow Bar Counter</button>
+                        <button type="button" class="sugiana_zone_btn" data-zone="teras">Teras Cahaya Pagi</button>
+                    </div>
+
+                    <div class="sugiana_zone_preview">
+                        <img id="sugiana_zone_img" src="assets/image/sugiana-bg-24.jpg" alt="Meja Komunal Kerja SEGI Coffee">
+                    </div>
+
+                    <div class="sugiana_zone_body">
+                        <h3 id="sugiana_zone_title">Meja Komunal & Ruang Kerja</h3>
+                        <p id="sugiana_zone_desc">Area dalam ruangan ber-AC dengan pencahayaan alami hangat, meja kayu luas untuk laptop, serta akses stopkontak di setiap sisi kursi.</p>
+
+                        <div class="sugiana_zone_amenities" id="sugiana_zone_amenities">
+                            <span class="sugiana_amenity_badge"><i data-lucide="users"></i> 2 – 8 Orang</span>
+                            <span class="sugiana_amenity_badge"><i data-lucide="plug"></i> Full Stopkontak</span>
+                            <span class="sugiana_amenity_badge"><i data-lucide="wifi"></i> Wi-Fi 150 Mbps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KOLOM KANAN: FORMULIR RESERVASI & PESAN MULTI-MODE -->
+                <div class="sugiana_booking_card">
+                    <div class="sugiana_mode_switch">
+                        <button type="button" class="sugiana_mode_btn sugiana_mode_active" data-mode="reservasi">Reservasi Meja</button>
+                        <button type="button" class="sugiana_mode_btn" data-mode="pesan">Kirim Pesan & Kolaborasi</button>
+                    </div>
+
+                    <form id="sugiana_contact_form">
+                        <div class="sugiana_form_row_2">
+                            <div class="sugiana_form_field">
+                                <label for="sugiana_ct_name">Nama Lengkap</label>
+                                <input type="text" id="sugiana_ct_name" placeholder="Nama Anda" required>
+                            </div>
+
+                            <div class="sugiana_form_field">
+                                <label for="sugiana_ct_phone">Nomor WhatsApp / Email</label>
+                                <input type="text" id="sugiana_ct_phone" placeholder="0812-xxxx-xxxx" required>
+                            </div>
+                        </div>
+
+                        <!-- FIELD KHUSUS RESERVASI MEJA -->
+                        <div id="sugiana_reservasi_fields">
+                            <div class="sugiana_form_row_2">
+                                <div class="sugiana_form_field">
+                                    <label for="sugiana_res_date">Tanggal Kunjungan</label>
+                                    <input type="date" id="sugiana_res_date">
+                                </div>
+
+                                <div class="sugiana_form_field">
+                                    <label for="sugiana_res_guests">Jumlah Tamu</label>
+                                    <select id="sugiana_res_guests">
+                                        <option value="1 - 2 Orang">1 – 2 Orang</option>
+                                        <option value="3 - 4 Orang">3 – 4 Orang</option>
+                                        <option value="5 - 8 Orang">5 – 8 Orang (Kelompok)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="sugiana_form_field">
+                                <label>Pilih Jam Kedatangan (WIB)</label>
+                                <div class="sugiana_slot_grid" id="sugiana_slot_grid">
+                                    <button type="button" class="sugiana_slot_btn sugiana_slot_active" data-slot="09:00 WIB">09:00</button>
+                                    <button type="button" class="sugiana_slot_btn" data-slot="13:00 WIB">13:00</button>
+                                    <button type="button" class="sugiana_slot_btn" data-slot="16:00 WIB">16:00</button>
+                                    <button type="button" class="sugiana_slot_btn" data-slot="19:30 WIB">19:30</button>
+                                </div>
+                            </div>
+
+                            <div class="sugiana_form_field">
+                                <label for="sugiana_res_zone">Zona Meja Pilihan</label>
+                                <select id="sugiana_res_zone">
+                                    <option value="Meja Komunal & Ruang Kerja">Meja Komunal & Ruang Kerja</option>
+                                    <option value="Slow Bar & Espresso Counter">Slow Bar & Espresso Counter</option>
+                                    <option value="Teras Cahaya Pagi (Semi-Outdoor)">Teras Cahaya Pagi (Semi-Outdoor)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- FIELD KHUSUS PESAN & KOLABORASI -->
+                        <div class="sugiana_hidden_group" id="sugiana_pesan_fields">
+                            <div class="sugiana_form_field">
+                                <label for="sugiana_msg_topic">Topik Pesan</label>
+                                <select id="sugiana_msg_topic">
+                                    <option value="Pertanyaan Umum">Pertanyaan Umum & Ketersediaan Menu</option>
+                                    <option value="Kerja Sama & Event">Kerja Sama Komunitas / Private Event</option>
+                                    <option value="Pemesanan Biji Kopi">Pemesanan Roasted Beans (Grosir / Cafe)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="sugiana_form_field">
+                            <label for="sugiana_ct_notes">Catatan Tambahan</label>
+                            <textarea id="sugiana_ct_notes" rows="3" placeholder="Tuliskan kebutuhan khusus (contoh: dekat stopkontak, pesanan khusus, atau detail pertanyaan)..."></textarea>
+                        </div>
+
+                        <button type="submit" class="sugiana_btn_primary" id="sugiana_ct_submit_btn">
+                            <i data-lucide="calendar-check"></i>
+                            <span>Konfirmasi Reservasi Meja</span>
+                        </button>
+                    </form>
+
+                    <!-- TIKET KONFIRMASI OTOMATIS -->
+                    <div class="sugiana_booking_ticket" id="sugiana_booking_ticket">
+                        <div class="sugiana_ticket_header">
+                            <div>
+                                <span class="sugiana_eyebrow">KONFIRMASI TERCATAT</span>
+                                <h3 id="sugiana_ticket_heading">Kode Booking: #SEGI-2026</h3>
+                            </div>
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+                        <p id="sugiana_ticket_summary"></p>
+                        <div class="sugiana_ticket_actions">
+                            <button type="button" class="sugiana_btn_secondary" id="sugiana_copy_booking_btn">
+                                <i data-lucide="copy"></i>
+                                <span>Salin Bukti Konfirmasi</span>
+                            </button>
+                            <span class="sugiana_ticket_copy_msg" id="sugiana_ticket_copy_msg"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- INTERACTIVE ZONE & RESERVATION HUB END -->
+
+    <!-- LOCATION MAP & DIRECTIONS START -->
+    <section class="sugiana_map_section" id="sugiana_map_section">
+        <div class="sugiana_contact_container">
+            <div class="sugiana_map_card">
+                <div class="sugiana_map_frame">
+                    <iframe
+                        title="Peta Lokasi SEGI Coffee Tasikmalaya"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=108.2115%2C-7.3340%2C108.2305%2C-7.3210&amp;layer=mapnik&amp;marker=-7.3274%2C108.2207"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="sugiana_map_info">
+                    <span class="sugiana_eyebrow">PETUNJUK LOKASI</span>
+                    <h2>Mudah Dijangkau di Pusat Kota Tasikmalaya</h2>
+                    <p>Berlokasi strategis di koridor Jl. Pemuda, hanya 5 menit berjalan kaki dari kawasan Taman Kota dan Masjid Agung Tasikmalaya.</p>
+
+                    <ul class="sugiana_map_detail_list">
+                        <li>
+                            <i data-lucide="car"></i>
+                            <span>Tersedia area parkir kendaraan roda dua dan roda empat di halaman depan kedai.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="compass"></i>
+                            <span>Patokan: 150 meter di sebelah timur persimpangan Jl. Pemuda – Jl. Yudanegara.</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://maps.google.com/?q=Tasikmalaya" target="_blank" rel="noopener noreferrer" class="sugiana_btn_primary">
+                        <i data-lucide="navigation"></i>
+                        <span>Buka Petunjuk Arah</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- LOCATION MAP & DIRECTIONS END -->
+
+    <!-- FOOTER START -->
+    <footer class="sugiana_footer" id="sugiana_footer">
+        <div class="sugiana_footer_container">
+            <div class="sugiana_footer_top">
+                <div class="sugiana_footer_brand">
+                    <a href="index.html" class="sugiana_navbar_logo">
+                        <span class="sugiana_logo_grid">
+                            <span></span>
+                            <span class="sugiana_logo_accent"></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        SEGI
+                    </a>
+                    <p>Pilihanmu. SEGI Coffee. Tempat kopi untuk singgah modern dengan seduhan presisi di Kota Tasikmalaya.</p>
+                </div>
+
+                <div class="sugiana_footer_links_wrap">
+                    <div class="sugiana_footer_col">
+                        <h4>Navigasi</h4>
+                        <ul>
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="tentang.html">Tentang Kami</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="galeri.html">Galeri</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sugiana_footer_col">
+                        <h4>Informasi</h4>
+                        <ul>
+                            <li><a href="testimoni.html">Testimoni</a></li>
+                            <li><a href="promo.html">Promo</a></li>
+                            <li><a href="kontak.html">Kontak & Reservasi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sugiana_footer_col">
+                        <h4>Hubungi Kami</h4>
+                        <ul>
+                            <li><a href="kontak.html"><i data-lucide="globe"></i> @segicoffee.id</a></li>
+                            <li><a href="kontak.html"><i data-lucide="mail"></i> owner@segicoffee.id</a></li>
+                            <li><a href="kontak.html"><i data-lucide="phone"></i> +62 869-8971-9222</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sugiana_footer_bottom">
+                <span>&copy; 2026 SEGI Coffee by Mochamad Sugiana. All rights reserved.</span>
+                <span>Buka Setiap Hari • 08.00 – 22.00 WIB</span>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

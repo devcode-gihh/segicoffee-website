@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINK FAVIOCON -->
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+
+    <!-- LINK GOOGLE FONTS (SERIF PLAYFAIR DISPLAY & SANS-SERIF POPPINS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS RESPONSIVE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tablet.css">
+    <link rel="stylesheet" href="assets/css/laptop.css">
+    <link rel="stylesheet" href="assets/css/desktop.css">
+
+    <!-- LINK LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>SEGI Coffee — Daftar Menu</title>
+</head>
+<body>
+
+    <!-- NAVBAR START -->
+    <header class="sugiana_header" id="sugiana_header">
+        <nav class="sugiana_navbar" id="sugiana_navbar">
+            <a href="index.html" class="sugiana_navbar_logo">
+                <span class="sugiana_logo_grid">
+                    <span></span>
+                    <span class="sugiana_logo_accent"></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                SEGI
+            </a>
+
+            <div class="sugiana_navbar_nav" id="sugiana_navbar_nav">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="menu.html" class="sugiana_active">Menu</a>
+                <a href="galeri.html">Galeri</a>
+                <a href="testimoni.html">Testimoni</a>
+                <a href="promo.html">Promo</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+
+            <div class="sugiana_navbar_extra">
+                <a href="kontak.html" class="sugiana_btn_reservasi">Reservasi</a>
+
+                <button type="button" class="sugiana_burger_menu" id="sugiana_burger_menu" aria-label="Buka Navigasi">
+                    <span class="sugiana_line_1"></span>
+                    <span class="sugiana_line_2"></span>
+                    <span class="sugiana_line_3"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- NAVBAR END -->
+
+    <!-- MENU HEADER & SEASONAL SPOTLIGHT START -->
+    <section class="sugiana_menu_header" id="sugiana_menu_header">
+        <div class="sugiana_menu_container">
+            <div class="sugiana_menu_top_split">
+                <div class="sugiana_menu_headline">
+                    <span class="sugiana_eyebrow">KATALOG SAJIAN SEGI</span>
+                    <h1>Racikan Istimewa untuk Setiap Selera.</h1>
+                    <p>Nikmati pilihan espresso, kopi seduh manual, minuman non-kopi, dan aneka bakery yang disiapkan dengan cermat untuk melengkapi momen santai maupun aktivitas Anda di sini.</p>
+                </div>
+
+                <!-- KARTU SOROTAN MUSIMAN -->
+                <article class="sugiana_spotlight_card">
+                    <div class="sugiana_spotlight_img">
+                        <img src="assets/image/sugiana-menu-37.jpg" alt="Matcha Creamy Latte">
+                    </div>
+                    <div class="sugiana_spotlight_body">
+                        <span class="sugiana_spotlight_tag">MENU BESTSELLER</span>
+                        <h3>Matcha Creamy Latte</h3>
+                        <p>Matcha premium berpadu susu creamy, menghadirkan rasa earthy lembut dan seimbang.</p>
+                        <div class="sugiana_spotlight_footer">
+                            <strong>Rp 33.000</strong>
+                            <button type="button" class="sugiana_btn_primary sugiana_add_order_btn" data-name="Matcha Creamy Latte" data-price="33000">
+                                <i data-lucide="plus"></i>
+                                <span>Tambah ke Catatan</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- MENU HEADER & SEASONAL SPOTLIGHT END -->
+
+    <!-- MENU CATALOG & ORDER ESTIMATOR START -->
+    <section class="sugiana_menu_explorer" id="sugiana_menu_explorer">
+        <div class="sugiana_menu_container">
+
+            <!-- TOOLBAR FILTER & PENCARIAN -->
+            <div class="sugiana_catalog_controls">
+                <div class="sugiana_cat_tabs">
+                    <button type="button" class="sugiana_cat_btn sugiana_cat_active" data-category="all">Semua Sajian</button>
+                    <button type="button" class="sugiana_cat_btn" data-category="espresso">Espresso Base</button>
+                    <button type="button" class="sugiana_cat_btn" data-category="manual">Manual Brew</button>
+                    <button type="button" class="sugiana_cat_btn" data-category="nonkopi">Non-Kopi</button>
+                    <button type="button" class="sugiana_cat_btn" data-category="bakery">Bakery</button>
+                </div>
+
+                <div class="sugiana_catalog_tools">
+                    <div class="sugiana_select_wrap">
+                        <select id="sugiana_temp_filter" class="sugiana_temp_select" aria-label="Filter Penyajian">
+                            <option value="all">Semua Penyajian</option>
+                            <option value="hot">Hot / Hangat</option>
+                            <option value="iced">Iced / Dingin</option>
+                            <option value="fresh">Fresh Baked</option>
+                        </select>
+                        <i data-lucide="chevron-down" class="sugiana_select_icon"></i>
+                    </div>
+
+                    <div class="sugiana_search_wrap">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="sugiana_menu_search" placeholder="Cari kopi atau pastry...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPLIT LAYOUT: DAFTAR MENU KIRI + KALKULATOR PESANAN KANAN -->
+            <div class="sugiana_catalog_layout">
+
+                <!-- KOLOM KIRI: DAFTAR KARTU MENU HORIZONTAL -->
+                <div class="sugiana_catalog_list" id="sugiana_catalog_list">
+
+                    <!-- ITEM 1 -->
+                    <article class="sugiana_dish_card" data-category="manual" data-temp="hot">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-32.jpg" alt="V60 Flores Bajawa">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>V60 Flores Bajawa</h3>
+                                <span class="sugiana_dish_meta_tag">Manual Brew • Hot</span>
+                            </div>
+                            <p>Kopi Flores dengan karakter nutty, sentuhan cokelat, dan keasaman seimbang.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 23.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="V60 Flores Bajawa" data-price="23000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 2 -->
+                    <article class="sugiana_dish_card" data-category="espresso" data-temp="iced">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-13.jpg" alt="Caramel Macchiato">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Caramel Macchiato</h3>
+                                <span class="sugiana_dish_meta_tag">Espresso • Iced</span>
+                            </div>
+                            <p>Perpaduan espresso bold, susu creamy, dan sentuhan karamel manis yang memikat.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 28.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Caramel Macchiato" data-price="28000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 3 -->
+                    <article class="sugiana_dish_card" data-category="espresso" data-temp="iced">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-15.jpg" alt="Classic Americano">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Classic Americano</h3>
+                                <span class="sugiana_dish_meta_tag">Espresso • Iced</span>
+                            </div>
+                            <p>Espresso autentik dengan karakter rasa kuat, clean, dan aroma khas kopi.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 20.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Classic Americano" data-price="20000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 4 -->
+                    <article class="sugiana_dish_card" data-category="nonkopi" data-temp="iced">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-22.jpg" alt="Japanese Matcha Latte">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Japanese Matcha Latte</h3>
+                                <span class="sugiana_dish_meta_tag">Non-Kopi • Iced</span>
+                            </div>
+                            <p>Matcha Jepang autentik dengan susu segar dan karakter earthy yang khas.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 30.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Japanese Matcha Latte" data-price="30000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 5 -->
+                    <article class="sugiana_dish_card" data-category="bakery" data-temp="fresh">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-27.jpg" alt="Butter Croissant">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Butter Croissant</h3>
+                                <span class="sugiana_dish_meta_tag">Pastry • Fresh Baked</span>
+                            </div>
+                            <p>Pastry berlapis dengan tekstur renyah, aroma butter, dan bagian dalam lembut.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 18.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Butter Croissant" data-price="18000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 6 -->
+                    <article class="sugiana_dish_card" data-category="espresso" data-temp="hot">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-17.jpg" alt="Signature Cafe Latte">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Signature Cafe Latte</h3>
+                                <span class="sugiana_dish_meta_tag">Espresso • Hot</span>
+                            </div>
+                            <p>Keseimbangan espresso bold, steamed milk lembut, dan lapisan microfoam halus.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 25.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Signature Cafe Latte" data-price="25000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 7 -->
+                    <article class="sugiana_dish_card" data-category="nonkopi" data-temp="iced">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-23.jpg" alt="Belgian Chocolate">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Belgian Chocolate</h3>
+                                <span class="sugiana_dish_meta_tag">Non-Kopi • Iced</span>
+                            </div>
+                            <p>Cokelat Belgia premium berpadu susu creamy dengan rasa manis yang seimbang.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 27.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Belgian Chocolate" data-price="27000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 8 -->
+                    <article class="sugiana_dish_card" data-category="manual" data-temp="hot">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-33.jpg" alt="French Press Sumatra">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>French Press Sumatra</h3>
+                                <span class="sugiana_dish_meta_tag">Manual Brew • hot</span>
+                            </div>
+                            <p>Kopi Sumatra dengan body tebal, aroma rempah, dan karakter earthy.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 26.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="French Press Sumatra" data-price="26000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 9 -->
+                    <article class="sugiana_dish_card" data-category="espresso" data-temp="iced">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-21.jpg" alt="Vanilla Latte">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Vanilla Latte</h3>
+                                <span class="sugiana_dish_meta_tag">Espresso • Iced</span>
+                            </div>
+                            <p>	Espresso berkualitas dengan susu creamy dan aroma vanilla yang lembut.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 28.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Vanilla Latte" data-price="28000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 10 -->
+                    <article class="sugiana_dish_card" data-category="bakery" data-temp="fresh">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-30.jpg" alt="Cinnamon Roll">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Cinnamon Roll</h3>
+                                <span class="sugiana_dish_meta_tag">Pastry • Fresh Baked</span>
+                            </div>
+                            <p>Roti gulung lembut dengan aroma kayu manis dan lapisan icing manis.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 24.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Cinnamon Roll" data-price="24000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 11 -->
+                    <article class="sugiana_dish_card" data-category="bakery" data-temp="fresh">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-31.jpg" alt="Strawberry Cheesecake">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Strawberry Cheesecake</h3>
+                                <span class="sugiana_dish_meta_tag">Cake • Fresh Baked</span>
+                            </div>
+                            <p>Cheesecake lembut berpadu cream cheese kaya rasa dan topping strawberry segar.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 32.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Strawberry Cheesecake" data-price="32000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 12 -->
+                    <article class="sugiana_dish_card" data-category="manual" data-temp="iced">
+                        <div class="sugiana_dish_thumb">
+                            <img src="assets/image/sugiana-menu-34.jpg" alt="Japanese Kyoto Blend">
+                        </div>
+                        <div class="sugiana_dish_content">
+                            <div class="sugiana_dish_head">
+                                <h3>Japanese Kyoto Blend</h3>
+                                <span class="sugiana_dish_meta_tag">Manual Brew • Iced</span>
+                            </div>
+                            <p>Seduhan kopi dingin dengan aroma fruity, rasa ringan, dan sensasi menyegarkan.</p>
+                            <div class="sugiana_dish_footer">
+                                <span class="sugiana_dish_price">Rp 30.000</span>
+                                <button type="button" class="sugiana_add_order_btn" data-name="Japanese Kyoto Blend" data-price="30000">
+                                    <i data-lucide="plus"></i>
+                                    <span>Tambah</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PESAN KETIKA FILTER / PENCARIAN TIDAK COCOK -->
+                    <div class="sugiana_empty_catalog" id="sugiana_empty_catalog">
+                        <p>Tidak ada menu yang cocok dengan filter atau kata kunci pencarianmu.</p>
+                    </div>
+
+                </div>
+
+                <!-- KOLOM KANAN: PANEL ESTIMASI CATATAN PESANAN -->
+                <aside class="sugiana_order_sidebar">
+                    <div class="sugiana_order_card">
+                        <div class="sugiana_order_head">
+                            <div>
+                                <span class="sugiana_eyebrow">SIMULASI PEMESANAN</span>
+                                <h3>Catatan Pesananmu</h3>
+                            </div>
+                            <span class="sugiana_order_count" id="sugiana_order_count">0 Item</span>
+                        </div>
+
+                        <div class="sugiana_order_items" id="sugiana_order_items">
+                            <p class="sugiana_order_empty">Belum ada menu dipilih. Klik tombol <strong>+ Tambah</strong> pada daftar menu untuk menghitung estimasi pesanan.</p>
+                        </div>
+
+                        <div class="sugiana_order_summary">
+                            <div class="sugiana_order_total_row">
+                                <span>Estimasi Total</span>
+                                <strong class="sugiana_order_total_price" id="sugiana_order_total">Rp 0</strong>
+                            </div>
+
+                            <div class="sugiana_order_btns">
+                                <button type="button" class="sugiana_btn_primary" id="sugiana_copy_order">
+                                    <i data-lucide="copy"></i>
+                                    <span>Salin Daftar Pesanan</span>
+                                </button>
+                                <button type="button" class="sugiana_btn_secondary" id="sugiana_clear_order">
+                                    <i data-lucide="trash-2"></i>
+                                    <span>Reset</span>
+                                </button>
+                            </div>
+                            <p class="sugiana_copy_status" id="sugiana_copy_status"></p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- MENU CATALOG & ORDER ESTIMATOR END -->
+
+    <!-- ROASTERY BEAN SPECS START -->
+    <section class="sugiana_beans_section" id="sugiana_beans_section">
+        <div class="sugiana_menu_container">
+            <div class="sugiana_section_header_row">
+                <div class="sugiana_section_title_group">
+                    <span class="sugiana_eyebrow">TRANSPARANSI BAHAN</span>
+                    <h2>Pilihan Biji Kopi Yang Kami Sajikan</h2>
+                </div>
+                <a href="promo.html" class="sugiana_link_all">
+                    <span>Cek promo pembelian biji</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="sugiana_beans_grid">
+                <div class="sugiana_bean_card">
+                    <div class="sugiana_bean_head">
+                        <h4>SEGI House Blend</h4>
+                        <span class="sugiana_bean_roast">Medium Roast</span>
+                    </div>
+                    <p>Perpaduan 70% Arabika Priangan dan 30% Robusta pilihan untuk menghasilkan body tebal pada sajian kopi susu.</p>
+                    <span class="sugiana_bean_specs">Notes: Dark Chocolate • Roasted Almond • Palm Sugar</span>
+                </div>
+
+                <div class="sugiana_bean_card">
+                    <div class="sugiana_bean_head">
+                        <h4>Galunggung Washed</h4>
+                        <span class="sugiana_bean_roast">Light Medium</span>
+                    </div>
+                    <p>Ditanam pada ketinggian 1.450 mdpl di Tasikmalaya dengan proses full-washed yang bersih dan menyegarkan.</p>
+                    <span class="sugiana_bean_specs">Notes: Mandarin Orange • Jasmine • Cane Sugar</span>
+                </div>
+
+                <div class="sugiana_bean_card">
+                    <div class="sugiana_bean_head">
+                        <h4>Cikuray Natural</h4>
+                        <span class="sugiana_bean_roast">Light Roast</span>
+                    </div>
+                    <p>Dikeringkan utuh bersama kulit ceri selama 21 hari untuk memunculkan karakter manis buah tropis yang kompleks.</p>
+                    <span class="sugiana_bean_specs">Notes: Red Berry • Pineapple • Silky Body</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ROASTERY BEAN SPECS END -->
+
+    <!-- FOOTER START -->
+    <footer class="sugiana_footer" id="sugiana_footer">
+        <div class="sugiana_footer_container">
+            <div class="sugiana_footer_top">
+                <div class="sugiana_footer_brand">
+                    <a href="index.html" class="sugiana_navbar_logo">
+                        <span class="sugiana_logo_grid">
+                            <span></span>
+                            <span class="sugiana_logo_accent"></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        SEGI
+                    </a>
+                    <p>Pilihanmu. SEGI Coffee. Tempat kopi untuk singgah modern dengan seduhan presisi di Kota Tasikmalaya.</p>
+                </div>
+
+                <div class="sugiana_footer_links_wrap">
+                    <div class="sugiana_footer_col">
+                        <h4>Navigasi</h4>
+                        <ul>
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="tentang.html">Tentang Kami</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="galeri.html">Galeri</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sugiana_footer_col">
+                        <h4>Informasi</h4>
+                        <ul>
+                            <li><a href="testimoni.html">Testimoni</a></li>
+                            <li><a href="promo.html">Promo</a></li>
+                            <li><a href="kontak.html">Kontak & Reservasi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sugiana_footer_col">
+                        <h4>Hubungi Kami</h4>
+                        <ul>
+                            <li><a href="kontak.html"><i data-lucide="globe"></i> @segicoffee.id</a></li>
+                            <li><a href="kontak.html"><i data-lucide="mail"></i> owner@segicoffee.id</a></li>
+                            <li><a href="kontak.html"><i data-lucide="phone"></i> +62 869-8971-9222</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sugiana_footer_bottom">
+                <span>&copy; 2026 SEGI Coffee by Mochamad Sugiana. All rights reserved.</span>
+                <span>Buka Setiap Hari • 08.00 – 22.00 WIB</span>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

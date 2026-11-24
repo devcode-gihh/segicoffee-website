@@ -1,0 +1,3343 @@
+:root {
+    --bg-cream: #FAF7F2;
+    --bg-beige: #EFE7DC;
+    --bg-beige-soft: #F6F1EA;
+    --bg-white: #fffbf6;
+    --text-dark: #231B16;
+    --text-muted: #6E6056;
+    --accent-mocha: #8C6239;
+    --accent-mocha-dark: #6E4B2A;
+    --border-beige: #E4DACD;
+    --shadow-card: 0 14px 36px rgba(35, 27, 22, 0.06);
+    --shadow-soft: 0 8px 24px rgba(35, 27, 22, 0.04);
+
+    /* --bg-cream: #F6F1E9;
+    --bg-beige: #EAE0D2;
+    --bg-beige-soft: #EFE8DC;
+    --bg-white: #FCF9F4;
+    --text-dark: #231B16;
+    --text-muted: #6E6056;
+    --accent-mocha: #8C6239;
+    --accent-mocha-dark: #6E4B2A;
+    --border-beige: #E2D7C7;
+    --shadow-card: 0 12px 32px rgba(35, 27, 22, 0.05);
+    --shadow-soft: 0 6px 20px rgba(35, 27, 22, 0.035); */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    line-height: 1.65;
+}
+
+
+/* NAVBAR START */
+header.sugiana_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9990;
+    padding: 1rem 6%;
+    transition: all 0.3s ease;
+}
+
+header.sugiana_header.sugiana_header_scrolled {
+    background-color: rgba(246, 241, 233, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-beige);
+}
+
+nav.sugiana_navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.sugiana_navbar_logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-dark);
+}
+
+.sugiana_logo_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 7px);
+    gap: 3.5px;
+}
+
+.sugiana_logo_grid span {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background-color: var(--text-dark);
+}
+
+.sugiana_logo_grid span.sugiana_logo_accent {
+    background-color: #B56E3E;
+}
+
+div.sugiana_navbar_nav {
+    position: fixed;
+    top: 4.8rem;
+    left: 6%;
+    right: 6%;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 9995;
+}
+
+div.sugiana_navbar_nav.sugiana_nav_open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+div.sugiana_navbar_nav a {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    padding: 0.65rem 1rem;
+    border-radius: 5px;
+    transition: all 0.25s ease;
+}
+
+div.sugiana_navbar_nav a:hover {
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+}
+
+div.sugiana_navbar_nav a.sugiana_active {
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha-dark);
+    font-weight: 600;
+}
+
+.sugiana_navbar_extra {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+a.sugiana_btn_reservasi {
+    display: none;
+}
+
+button.sugiana_burger_menu {
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1.5px solid var(--border-beige);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+button.sugiana_burger_menu span {
+    width: 19px;
+    height: 1.8px;
+    background-color: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+button.sugiana_burger_menu.sugiana_burger_active .sugiana_line_1 {
+    transform: rotate(45deg) translate(4.5px, 4.5px);
+}
+
+button.sugiana_burger_menu.sugiana_burger_active .sugiana_line_2 {
+    opacity: 0;
+}
+
+button.sugiana_burger_menu.sugiana_burger_active .sugiana_line_3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+/* NAVBAR END */
+
+
+/* HERO SECTION START */
+section.sugiana_hero {
+    padding: 7.2rem 6% 4.5rem 6%;
+    background: linear-gradient(135deg, #EFE7DC 0%, #FAF6F0 55%, #E8DDD0 100%);
+    border-bottom: 1px solid var(--border-beige);
+}
+
+.sugiana_hero_container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    align-items: center;
+}
+
+span.sugiana_hero_tag {
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--accent-mocha);
+    margin-bottom: 0.65rem;
+}
+
+.sugiana_hero_content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.35rem;
+    font-weight: 600;
+    line-height: 1.18;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.sugiana_hero_content p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 1.8rem;
+}
+
+.sugiana_hero_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+a.sugiana_btn_primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.82rem 1.65rem;
+    border-radius: 5px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    font-size: 0.86rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a.sugiana_btn_primary:hover {
+    background-color: var(--accent-mocha-dark);
+    transform: translateY(-2px);
+}
+
+a.sugiana_btn_secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.82rem 1.65rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-size: 0.86rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a.sugiana_btn_secondary:hover {
+    border-color: var(--accent-mocha);
+    color: var(--accent-mocha);
+}
+
+a.sugiana_btn_primary svg,
+a.sugiana_btn_secondary svg {
+    width: 16px;
+    height: 16px;
+}
+
+.sugiana_hero_image_card {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_hero_image_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* HERO SECTION END */
+
+
+/* FLOATING VALUE BAR START */
+section.sugiana_floating_bar_sec {
+    padding: 0 6%;
+    margin-top: 4.5rem;
+    position: relative;
+    z-index: 5;
+}
+
+.sugiana_floating_bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.sugiana_floating_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.95rem;
+}
+
+.sugiana_floating_icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sugiana_floating_icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sugiana_floating_text h4 {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.1rem;
+}
+
+.sugiana_floating_text p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+/* FLOATING VALUE BAR END */
+
+
+/* PILIHAN TAMU (FEATURED MENU) START */
+section.sugiana_menu_showcase {
+    padding: 4.5rem 6% 3rem 6%;
+}
+
+.sugiana_section_header_row {
+    max-width: 1280px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+span.sugiana_eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: var(--accent-mocha);
+    margin-bottom: 0.25rem;
+}
+
+.sugiana_section_title_group h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+a.sugiana_link_all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.25s ease;
+}
+
+a.sugiana_link_all:hover {
+    color: var(--accent-mocha);
+}
+
+a.sugiana_link_all svg {
+    width: 16px;
+    height: 16px;
+}
+
+.sugiana_menu_grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+}
+
+article.sugiana_menu_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 0.85rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article.sugiana_menu_card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_menu_img_wrap {
+    width: 100%;
+    height: 200px;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: var(--bg-beige-soft);
+}
+
+.sugiana_menu_img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+article.sugiana_menu_card:hover .sugiana_menu_img_wrap img {
+    transform: scale(1.04);
+}
+
+.sugiana_menu_body {
+    padding: 1rem 0.35rem 0.35rem 0.35rem;
+}
+
+.sugiana_menu_body h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.45rem;
+}
+
+.sugiana_menu_meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span.sugiana_menu_price {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+a.sugiana_menu_square_btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease;
+}
+
+a.sugiana_menu_square_btn:hover {
+    background-color: var(--accent-mocha-dark);
+}
+
+a.sugiana_menu_square_btn svg {
+    width: 15px;
+    height: 15px;
+}
+/* PILIHAN TAMU (FEATURED MENU) END */
+
+
+/* EDITORIAL STORY SECTION START */
+section.sugiana_story_section {
+    padding: 3.5rem 6%;
+}
+
+.sugiana_story_grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sugiana_story_text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+}
+
+.sugiana_story_text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.9rem;
+}
+
+.sugiana_story_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.3rem;
+}
+
+.sugiana_story_visual {
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sugiana_story_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_story_badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-beige);
+    border-radius: 7px;
+    padding: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--text-dark);
+}
+/* EDITORIAL STORY SECTION END */
+
+/* LOKASI & SUDUT RUANG START */
+section.sugiana_spots_section {
+    padding: 3rem 6% 5rem 6%;
+}
+
+.sugiana_spots_grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+}
+
+article.sugiana_spot_card {
+    position: relative;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-beige);
+    box-shadow: var(--shadow-soft);
+}
+
+article.sugiana_spot_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+article.sugiana_spot_card:hover img {
+    transform: scale(1.05);
+}
+
+.sugiana_spot_pill {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 7px;
+    padding: 0.6rem 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.sugiana_spot_pill svg {
+    width: 15px;
+    height: 15px;
+    color: var(--accent-mocha);
+    flex-shrink: 0;
+}
+/* LOKASI & SUDUT RUANG END */
+
+
+/* HALAMAN TENTANG KAMI START */
+section.sugiana_about_hero {
+    padding: 6.5rem 6% 3.5rem 6%;
+    background: linear-gradient(180deg, #EFE7DC 0%, var(--bg-cream) 100%);
+}
+
+.sugiana_about_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_about_intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.sugiana_about_intro h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin: 0.4rem 0 0.9rem 0;
+}
+
+.sugiana_about_intro p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+.sugiana_about_banner {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-beige);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_about_banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_about_stats {
+    margin-top: -1.8rem;
+    position: relative;
+    z-index: 4;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 0 0 15px 15px;
+    padding: 1.4rem;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.sugiana_stat_box strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    color: var(--accent-mocha);
+}
+
+.sugiana_stat_box span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* ZIG-ZAG NARRATIVE */
+section.sugiana_about_narrative {
+    padding: 3.5rem 6%;
+}
+
+.sugiana_narrative_row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.sugiana_narrative_row:last-child {
+    margin-bottom: 0;
+}
+
+.sugiana_narrative_text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.85rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0.3rem 0 0.9rem 0;
+}
+
+.sugiana_narrative_text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.9rem;
+}
+
+ul.sugiana_narrative_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+ul.sugiana_narrative_list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+
+ul.sugiana_narrative_list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-mocha);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+ul.sugiana_narrative_list strong {
+    color: var(--text-dark);
+}
+
+.sugiana_narrative_img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-beige);
+    box-shadow: var(--shadow-soft);
+}
+
+.sugiana_narrative_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* INTERACTIVE TIMELINE */
+section.sugiana_about_timeline {
+    padding: 3rem 6%;
+}
+
+.sugiana_timeline_head {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 2rem auto;
+}
+
+.sugiana_timeline_head h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin: 0.3rem 0 0.5rem 0;
+}
+
+.sugiana_timeline_head p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.4rem;
+}
+
+.sugiana_timeline_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+button.sugiana_timeline_btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+button.sugiana_timeline_btn:hover,
+button.sugiana_timeline_btn.sugiana_timeline_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+.sugiana_timeline_panel {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.sugiana_timeline_img {
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sugiana_timeline_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+span.sugiana_timeline_tag {
+    display: inline-block;
+    padding: 0.32rem 0.9rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+}
+
+.sugiana_timeline_body h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    margin-bottom: 0.65rem;
+}
+
+.sugiana_timeline_body p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.3rem;
+}
+
+/* TEAM ROSTER */
+section.sugiana_about_team {
+    padding: 3.5rem 6% 5rem 6%;
+}
+
+.sugiana_team_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+article.sugiana_team_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 0.9rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.sugiana_team_photo {
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sugiana_team_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_team_info {
+    padding: 1.1rem 0.4rem 0.4rem 0.4rem;
+}
+
+span.sugiana_team_role {
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--accent-mocha);
+    margin-bottom: 0.25rem;
+}
+
+.sugiana_team_info h3 {
+    font-size: 1.08rem;
+    margin-bottom: 0.4rem;
+}
+
+.sugiana_team_info p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+}
+/* HALAMAN TENTANG KAMI END */
+
+
+/* HALAMAN MENU START */
+section.sugiana_menu_header {
+    padding: 7.5rem 6% 3.2rem 6%;
+    background: linear-gradient(180deg, #EFE7DC 0%, var(--bg-cream) 100%);
+    border-bottom: 1px solid var(--border-beige);
+}
+
+.sugiana_menu_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_menu_top_split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sugiana_menu_headline h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.35rem 0 0.85rem 0;
+}
+
+.sugiana_menu_headline p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 520px;
+}
+
+article.sugiana_spotlight_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.sugiana_spotlight_img {
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sugiana_spotlight_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+span.sugiana_spotlight_tag {
+    display: inline-block;
+    padding: 0.28rem 0.8rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.45rem;
+}
+
+.sugiana_spotlight_body h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.sugiana_spotlight_body p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.sugiana_spotlight_footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.sugiana_spotlight_footer strong {
+    font-size: 1.05rem;
+    color: var(--accent-mocha);
+}
+
+/* TOOLBAR FILTER & SEARCH */
+section.sugiana_menu_explorer {
+    padding: 3rem 6% 4rem 6%;
+}
+
+.sugiana_catalog_controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+}
+
+.sugiana_cat_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button.sugiana_cat_btn {
+    padding: 0.58rem 1.15rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button.sugiana_cat_btn:hover,
+button.sugiana_cat_btn.sugiana_cat_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+.sugiana_catalog_tools {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sugiana_select_wrap {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+select.sugiana_temp_select,
+.sugiana_select_wrap select {
+    width: fit-content;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0.78rem 2.6rem 0.78rem 1rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.sugiana_select_wrap svg,
+.sugiana_select_icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: color 0.25s ease;
+}
+
+.sugiana_select_wrap select:focus + svg {
+    color: var(--accent-mocha);
+}
+
+.sugiana_search_wrap {
+    position: relative;
+    width: 100%;
+}
+
+.sugiana_search_wrap svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+}
+
+.sugiana_search_wrap input {
+    width: 100%;
+    padding: 0.62rem 1rem 0.62rem 2.5rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.83rem;
+    color: var(--text-dark);
+}
+
+.sugiana_search_wrap input:focus,
+select.sugiana_temp_select:focus {
+    border-color: var(--accent-mocha);
+}
+
+/* SPLIT LAYOUT: HORIZONTAL CARDS + ORDER SIDEBAR */
+.sugiana_catalog_layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.sugiana_catalog_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+}
+
+article.sugiana_dish_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 0.9rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+article.sugiana_dish_card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_dish_thumb {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sugiana_dish_thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_dish_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sugiana_dish_head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    margin-bottom: 0.35rem;
+}
+
+.sugiana_dish_head h3 {
+    font-size: 1.02rem;
+    font-weight: 600;
+}
+
+span.sugiana_dish_meta_tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.22rem 0.65rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--text-muted);
+}
+
+.sugiana_dish_content p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+}
+
+.sugiana_dish_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--border-beige);
+}
+
+span.sugiana_dish_price {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-mocha);
+}
+
+button.sugiana_add_order_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.48rem 1rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_add_order_btn:hover {
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+button.sugiana_add_order_btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.sugiana_empty_catalog {
+    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+    background-color: var(--bg-white);
+    border: 1px dashed var(--border-beige);
+    border-radius: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ORDER ESTIMATOR SIDEBAR */
+.sugiana_order_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_order_head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-beige);
+}
+
+.sugiana_order_head h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+span.sugiana_order_count {
+    padding: 0.3rem 0.75rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sugiana_order_items {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+p.sugiana_order_empty {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.sugiana_order_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px dashed var(--border-beige);
+}
+
+.sugiana_order_row_info h4 {
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.sugiana_order_row_info span {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+}
+
+.sugiana_order_qty_ctrl {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+button.sugiana_qty_btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+button.sugiana_qty_btn:hover {
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+.sugiana_order_summary {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-beige);
+}
+
+.sugiana_order_total_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+strong.sugiana_order_total_price {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent-mocha);
+}
+
+.sugiana_order_btns {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.sugiana_order_btns button.sugiana_btn_primary,
+.sugiana_order_btns button.sugiana_btn_secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.72rem 1.1rem;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sugiana_order_btns button.sugiana_btn_primary {
+    flex: 1;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+.sugiana_order_btns button.sugiana_btn_secondary {
+    background-color: var(--bg-beige-soft);
+    color: var(--text-dark);
+}
+
+.sugiana_order_btns svg {
+    width: 15px;
+    height: 15px;
+}
+
+p.sugiana_copy_status {
+    font-size: 0.76rem;
+    color: var(--accent-mocha);
+    margin-top: 0.6rem;
+    min-height: 1.1rem;
+}
+
+/* ROASTERY BEANS SPECS */
+section.sugiana_beans_section {
+    padding: 2rem 6% 5rem 6%;
+}
+
+.sugiana_beans_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.sugiana_bean_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.sugiana_bean_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sugiana_bean_head h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+span.sugiana_bean_roast {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+}
+
+.sugiana_bean_card p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+}
+
+span.sugiana_bean_specs {
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--border-beige);
+}
+/* HALAMAN MENU END */
+
+
+/* HALAMAN GALERI START */
+section.sugiana_gallery_header {
+    padding: 7rem 6% 2.5rem 6%;
+}
+
+.sugiana_gallery_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_gallery_top_row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sugiana_gallery_intro h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.35rem 0 0.75rem 0;
+}
+
+.sugiana_gallery_intro p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 560px;
+}
+
+.sugiana_gallery_filter_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button.sugiana_gal_filter_btn {
+    padding: 0.58rem 1.15rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_gal_filter_btn:hover,
+button.sugiana_gal_filter_btn.sugiana_gal_filter_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+/* ARCHIVE GALLERY GRID */
+section.sugiana_archive_section {
+    padding: 0rem 6% 5rem 6%;
+}
+
+span.sugiana_gallery_count {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: .5rem;
+    color: var(--text-muted);
+}
+
+.sugiana_archive_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+}
+
+article.sugiana_archive_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 0.85rem;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article.sugiana_archive_card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_archive_img {
+    position: relative;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sugiana_archive_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+article.sugiana_archive_card:hover .sugiana_archive_img img {
+    transform: scale(1.05);
+}
+
+span.sugiana_archive_badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.28rem 0.8rem;
+    border-radius: 4px;
+    background-color: rgba(252, 249, 244, 0.92);
+    color: var(--text-dark);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.sugiana_archive_meta {
+    padding: 1rem 0.35rem 0.35rem 0.35rem;
+}
+
+.sugiana_archive_meta h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.sugiana_archive_meta p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* ASYMMETRIC BENTO MOSAIC (SESUAI REFERENSI) */
+section.sugiana_mosaic_section {
+    padding: 0.5rem 6% 3.5rem 6%;
+}
+
+.sugiana_mosaic_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+}
+
+figure.sugiana_mosaic_card {
+    position: relative;
+    height: 230px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-beige);
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+}
+
+figure.sugiana_mosaic_card.sugiana_mosaic_tall {
+    height: 230px;
+}
+
+figure.sugiana_mosaic_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+figure.sugiana_mosaic_card:hover img {
+    transform: scale(1.05);
+}
+
+figcaption.sugiana_mosaic_caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2.5rem 1.4rem 1.25rem 1.4rem;
+    background: linear-gradient(to top, rgba(24, 18, 14, 0.78) 0%, rgba(24, 18, 14, 0.25) 60%, transparent 100%);
+}
+
+figcaption.sugiana_mosaic_caption h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.2px;
+}
+
+/* LIGHTBOX MODAL */
+.sugiana_lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(26, 20, 16, 0.86);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.sugiana_lightbox.sugiana_lightbox_open {
+    display: flex;
+}
+
+.sugiana_lightbox_dialog {
+    position: relative;
+    width: 100%;
+    max-width: 820px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+button.sugiana_lightbox_close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 4;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--border-beige);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+}
+
+button.sugiana_lightbox_close:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sugiana_lightbox_media {
+    position: relative;
+    background-color: #1A1410;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sugiana_lightbox_media img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+button.sugiana_lightbox_nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--border-beige);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_lightbox_nav:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button.sugiana_lightbox_prev {
+    left: 14px;
+}
+
+button.sugiana_lightbox_next {
+    right: 14px;
+}
+
+.sugiana_lightbox_caption {
+    padding: 1.35rem 1.6rem;
+}
+
+span.sugiana_lightbox_tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-mocha);
+    margin-bottom: 0.25rem;
+}
+
+.sugiana_lightbox_caption h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.35rem;
+}
+
+.sugiana_lightbox_caption p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+}
+/* HALAMAN GALERI END */
+
+
+/* HALAMAN TESTIMONI START */
+section.sugiana_testi_header {
+    padding: 7.5rem 6% 3rem 6%;
+    background: linear-gradient(180deg, #EFE7DC 0%, var(--bg-cream) 100%);
+    border-bottom: 1px solid var(--border-beige);
+}
+
+.sugiana_testi_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_testi_hero_split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sugiana_testi_intro h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.35rem 0 0.85rem 0;
+}
+
+.sugiana_testi_intro p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 1.4rem;
+}
+
+/* RATING BREAKDOWN CARD */
+.sugiana_rating_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.6rem;
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_rating_top {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--border-beige);
+    margin-bottom: 1.1rem;
+}
+
+.sugiana_rating_number strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 2.7rem;
+    line-height: 1;
+    color: var(--text-dark);
+}
+
+.sugiana_rating_number span {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+}
+
+.sugiana_rating_stars {
+    display: flex;
+    gap: 3px;
+    color: var(--accent-mocha);
+    margin-bottom: 0.25rem;
+}
+
+.sugiana_rating_stars svg {
+    width: 17px;
+    height: 17px;
+    fill: var(--accent-mocha);
+}
+
+.sugiana_rating_meta p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.sugiana_rating_bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.sugiana_bar_row {
+    display: grid;
+    grid-template-columns: 74px 1fr 38px;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.sugiana_bar_track {
+    height: 7px;
+    border-radius: 50px;
+    background-color: var(--bg-beige-soft);
+    overflow: hidden;
+}
+
+.sugiana_bar_fill {
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--accent-mocha);
+}
+
+/* FEATURED QUOTE SPOTLIGHT */
+section.sugiana_testi_spotlight_sec {
+    padding: 3rem 6% 1.5rem 6%;
+}
+
+article.sugiana_spotlight_quote_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.2rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.sugiana_spotlight_quote_media {
+    height: 240px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sugiana_spotlight_quote_media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_quote_mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+}
+
+.sugiana_quote_mark svg {
+    width: 18px;
+    height: 18px;
+}
+
+.sugiana_spotlight_quote_body blockquote {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    color: var(--text-dark);
+    margin-bottom: 1.2rem;
+}
+
+.sugiana_spotlight_author {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.sugiana_spotlight_author img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--accent-mocha);
+}
+
+.sugiana_spotlight_author h4 {
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.sugiana_spotlight_author span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* STAGGERED MASONRY WALL */
+section.sugiana_testi_wall_sec {
+    padding: 2.5rem 6% 3.5rem 6%;
+}
+
+.sugiana_testi_filter_bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.sugiana_testi_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button.sugiana_testi_tab_btn {
+    padding: 0.56rem 1.15rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_testi_tab_btn:hover,
+button.sugiana_testi_tab_btn.sugiana_testi_tab_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+span.sugiana_testi_total_label {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+}
+
+.sugiana_masonry_wall {
+    column-count: 1;
+    column-gap: 1.4rem;
+}
+
+article.sugiana_wall_card {
+    break-inside: avoid;
+    margin-bottom: 1.4rem;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.45rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+article.sugiana_wall_card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_wall_card_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.sugiana_wall_stars {
+    display: flex;
+    gap: 2px;
+    color: var(--accent-mocha);
+}
+
+.sugiana_wall_stars svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--accent-mocha);
+}
+
+span.sugiana_wall_cat {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.24rem 0.72rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+}
+
+p.sugiana_wall_quote {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.65;
+    margin-bottom: 1.15rem;
+}
+
+.sugiana_wall_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--border-beige);
+}
+
+.sugiana_wall_user {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.sugiana_wall_user img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_wall_user h4 {
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.sugiana_wall_user span {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+}
+
+button.sugiana_helpful_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.38rem 0.75rem;
+    border-radius: 3px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+    color: var(--text-muted);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_helpful_btn:hover,
+button.sugiana_helpful_btn.sugiana_helpful_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+button.sugiana_helpful_btn svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* SPLIT REVIEW SUBMISSION FORM */
+section.sugiana_testi_form_sec {
+    padding: 2rem 6% 5rem 6%;
+}
+
+.sugiana_testi_form_split {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    align-items: start;
+}
+
+.sugiana_testi_invite h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0.35rem 0 0.8rem 0;
+}
+
+.sugiana_testi_invite p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+ul.sugiana_invite_points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+ul.sugiana_invite_points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+ul.sugiana_invite_points svg {
+    width: 17px;
+    height: 17px;
+    color: var(--accent-mocha);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.sugiana_form_field {
+    margin-bottom: 1rem;
+}
+
+.sugiana_form_field label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0.38rem;
+    color: var(--text-dark);
+}
+
+.sugiana_form_field input,
+.sugiana_form_field select,
+.sugiana_form_field textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+.sugiana_form_field input:focus,
+.sugiana_form_field select:focus,
+.sugiana_form_field textarea:focus {
+    border-color: var(--accent-mocha);
+    background-color: var(--bg-white);
+}
+
+.sugiana_star_picker {
+    display: flex;
+    gap: 0.4rem;
+}
+
+button.sugiana_star_pick_btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button.sugiana_star_pick_btn.sugiana_star_selected {
+    background-color: var(--bg-beige-soft);
+    border-color: var(--accent-mocha);
+    color: var(--accent-mocha);
+}
+
+button.sugiana_star_pick_btn.sugiana_star_selected svg {
+    fill: var(--accent-mocha);
+}
+
+button.sugiana_star_pick_btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.sugiana_testi_form_box button.sugiana_btn_primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.82rem 1.7rem;
+    border-radius: 5px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.86rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.sugiana_testi_form_box button.sugiana_btn_primary:hover {
+    background-color: var(--accent-mocha-dark);
+    transform: translateY(-2px);
+}
+
+.sugiana_testi_form_box button.sugiana_btn_primary svg {
+    width: 16px;
+    height: 16px;
+}
+
+.sugiana_testi_feedback {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    background-color: var(--bg-beige-soft);
+    border-left: 3px solid var(--accent-mocha);
+    font-size: 0.83rem;
+    color: var(--text-dark);
+}
+
+.sugiana_testi_feedback.sugiana_testi_feedback_show {
+    display: block;
+}
+/* HALAMAN TESTIMONI END */
+
+
+/* HALAMAN PROMO START */
+section.sugiana_promo_hero {
+    padding: 7.5rem 6% 3rem 6%;
+    background: linear-gradient(180deg, #EFE7DC 0%, var(--bg-cream) 100%);
+}
+
+.sugiana_promo_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_promo_intro {
+    max-width: 680px;
+    margin-bottom: 2.2rem;
+}
+
+.sugiana_promo_intro h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.35rem 0 0.8rem 0;
+}
+
+.sugiana_promo_intro p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* FEATURED BOARDING PASS CARD */
+article.sugiana_featured_pass {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.sugiana_pass_visual {
+    position: relative;
+    height: 220px;
+}
+
+.sugiana_pass_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+span.sugiana_pass_ribbon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 0.32rem 0.85rem;
+    border-radius: 5px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.sugiana_pass_details {
+    padding: 1.5rem;
+}
+
+.sugiana_pass_details h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin: 0.25rem 0 0.65rem 0;
+}
+
+.sugiana_pass_details p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.sugiana_countdown_wrap {
+    display: flex;
+    gap: 0.65rem;
+}
+
+.sugiana_cd_box {
+    min-width: 64px;
+    padding: 0.55rem 0.75rem;
+    border-radius: 5px;
+    background-color: var(--bg-beige-soft);
+    border: 1px solid var(--border-beige);
+    text-align: center;
+}
+
+.sugiana_cd_box strong {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.1;
+}
+
+.sugiana_cd_box span {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+.sugiana_pass_stub {
+    padding: 1.5rem;
+    background-color: var(--bg-beige-soft);
+    border-top: 2px dashed var(--border-beige);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+span.sugiana_stub_label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: var(--text-muted);
+}
+
+strong.sugiana_stub_code {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    color: var(--accent-mocha);
+}
+
+span.sugiana_stub_valid {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.sugiana_pass_stub button.sugiana_btn_primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.72rem 1.4rem;
+    border-radius: 5px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* VOUCHER TICKETS CATALOG */
+section.sugiana_vouchers_section {
+    padding: 2.5rem 6% 3.5rem 6%;
+}
+
+.sugiana_vouchers_toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.sugiana_promo_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button.sugiana_promo_tab_btn {
+    padding: 0.56rem 1.15rem;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_promo_tab_btn:hover,
+button.sugiana_promo_tab_btn.sugiana_promo_tab_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+span.sugiana_promo_toast {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--accent-mocha);
+}
+
+.sugiana_voucher_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+}
+
+article.sugiana_voucher_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+article.sugiana_voucher_card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.sugiana_voucher_top {
+    padding: 1.45rem 1.45rem 1.1rem 1.45rem;
+}
+
+.sugiana_voucher_badge_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+span.sugiana_voucher_tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+span.sugiana_voucher_off {
+    padding: 0.26rem 0.78rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+.sugiana_voucher_top h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.45rem;
+}
+
+.sugiana_voucher_top p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+/* GARIS SOBEKAN KUPON BERLEKUK */
+.sugiana_voucher_divider {
+    position: relative;
+    border-top: 2px dashed var(--border-beige);
+    margin: 0 0.75rem;
+}
+
+.sugiana_voucher_divider::before,
+.sugiana_voucher_divider::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+}
+
+.sugiana_voucher_divider::before {
+    left: -17px;
+}
+
+.sugiana_voucher_divider::after {
+    right: -17px;
+}
+
+.sugiana_voucher_bottom {
+    padding: 1rem 1.45rem 1.35rem 1.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+span.sugiana_code_caption {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+strong.sugiana_code_text {
+    font-size: 0.96rem;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+}
+
+button.sugiana_copy_pill_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.48rem 1rem;
+    border-radius: 3px;
+    background-color: var(--bg-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_copy_pill_btn:hover,
+button.sugiana_copy_pill_btn.sugiana_copied_done {
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+button.sugiana_copy_pill_btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* PROMO SAVINGS SIMULATOR */
+section.sugiana_simulator_sec {
+    padding: 2rem 6% 3.5rem 6%;
+}
+
+.sugiana_simulator_box {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.65rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sugiana_simulator_info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin: 0.3rem 0 0.7rem 0;
+}
+
+.sugiana_simulator_info p {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.sugiana_sim_input_row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.sugiana_sim_input_row input {
+    flex: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sugiana_sim_input_row button.sugiana_btn_primary {
+    padding: 0.75rem 1.35rem;
+    border-radius: 5px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sugiana_simulator_receipt {
+    background-color: var(--bg-beige-soft);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+span.sugiana_receipt_title {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--accent-mocha);
+    margin-bottom: 1rem;
+}
+
+.sugiana_receipt_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.86rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+}
+
+.sugiana_receipt_row strong {
+    color: var(--text-dark);
+}
+
+.sugiana_receipt_row.sugiana_receipt_discount strong {
+    color: var(--accent-mocha);
+}
+
+.sugiana_receipt_total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.9rem;
+    margin-top: 0.9rem;
+    border-top: 1px dashed var(--border-beige);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.sugiana_receipt_total strong {
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    color: var(--text-dark);
+}
+
+p.sugiana_sim_note {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.8rem;
+}
+
+/* FAQ ACCORDION */
+section.sugiana_promo_faq_sec {
+    padding: 2rem 6% 5rem 6%;
+}
+
+.sugiana_faq_layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.sugiana_faq_intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.85rem;
+    margin: 0.3rem 0 0.75rem 0;
+}
+
+.sugiana_faq_intro p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.3rem;
+}
+
+.sugiana_faq_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.sugiana_faq_item {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+button.sugiana_faq_question {
+    width: 100%;
+    padding: 1.15rem 1.35rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+button.sugiana_faq_question svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-mocha);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.sugiana_faq_item.sugiana_faq_open button.sugiana_faq_question svg {
+    transform: rotate(180deg);
+}
+
+.sugiana_faq_answer {
+    display: none;
+    padding: 0 1.35rem 1.2rem 1.35rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.sugiana_faq_item.sugiana_faq_open .sugiana_faq_answer {
+    display: block;
+}
+/* HALAMAN PROMO END */
+
+
+/* HALAMAN KONTAK START */
+section.sugiana_contact_hero {
+    padding: 7.5rem 6% 3rem 6%;
+    background: linear-gradient(180deg, #EFE7DC 0%, var(--bg-cream) 100%);
+}
+
+.sugiana_contact_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_contact_intro {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.sugiana_status_pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.36rem 1rem;
+    border-radius: 3px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.9rem;
+    margin-right: .5rem;
+    box-shadow: var(--shadow-soft);
+}
+
+span.sugiana_status_dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2E8B57;
+}
+
+.sugiana_status_pill.sugiana_status_closed span.sugiana_status_dot {
+    background-color: #C05621;
+}
+
+.sugiana_contact_intro h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.3rem 0 0.8rem 0;
+}
+
+.sugiana_contact_intro p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* 4 CHANNEL CARDS */
+.sugiana_channel_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+}
+
+article.sugiana_channel_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.35rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.sugiana_channel_icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 7px;
+    background-color: var(--bg-beige-soft);
+    color: var(--accent-mocha);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.85rem;
+}
+
+.sugiana_channel_icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+article.sugiana_channel_card h3 {
+    font-size: 0.96rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+article.sugiana_channel_card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* INTERACTIVE ZONE & RESERVATION HUB */
+section.sugiana_hub_section {
+    padding: 2rem 6% 3.5rem 6%;
+}
+
+.sugiana_hub_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.sugiana_zone_card,
+.sugiana_booking_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    padding: 1.6rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.sugiana_zone_card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.75rem;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+.sugiana_zone_card > p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.sugiana_zone_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+button.sugiana_zone_btn {
+    padding: 0.52rem 1rem;
+    border-radius: 5px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+    color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_zone_btn:hover,
+button.sugiana_zone_btn.sugiana_zone_active {
+    background-color: var(--accent-mocha);
+    border-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+.sugiana_zone_preview {
+    height: 230px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+
+.sugiana_zone_preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sugiana_zone_body h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    margin-bottom: 0.45rem;
+}
+
+.sugiana_zone_body p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.1rem;
+}
+
+.sugiana_zone_amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+span.sugiana_amenity_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+    padding: 0.38rem 0.85rem;
+    border-radius: 5px;
+    background-color: var(--bg-beige-soft);
+    color: var(--text-dark);
+    font-size: 0.76rem;
+    font-weight: 500;
+}
+
+span.sugiana_amenity_badge svg {
+    width: 14px;
+    height: 14px;
+    color: var(--accent-mocha);
+}
+
+/* BOOKING FORM & MODE SWITCH */
+.sugiana_mode_switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+    padding: 0.35rem;
+    border-radius: 5px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+    margin-bottom: 1.4rem;
+}
+
+button.sugiana_mode_btn {
+    padding: 0.6rem 0.9rem;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button.sugiana_mode_btn.sugiana_mode_active {
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+}
+
+.sugiana_form_row_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+}
+
+.sugiana_slot_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+button.sugiana_slot_btn {
+    padding: 0.55rem 0.4rem;
+    border-radius: 5px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-beige);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button.sugiana_slot_btn:hover,
+button.sugiana_slot_btn.sugiana_slot_active {
+    background-color: var(--bg-beige);
+    border-color: var(--accent-mocha);
+    color: var(--accent-mocha);
+    font-weight: 600;
+}
+
+.sugiana_hidden_group {
+    display: none;
+}
+
+.sugiana_booking_card button.sugiana_btn_primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 5px;
+    background-color: var(--accent-mocha);
+    color: var(--bg-white);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.86rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sugiana_booking_card button.sugiana_btn_primary svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* DIGITAL BOOKING TICKET */
+.sugiana_booking_ticket {
+    display: none;
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 18px;
+    background-color: var(--bg-beige-soft);
+    border: 1px dashed var(--accent-mocha);
+}
+
+.sugiana_booking_ticket.sugiana_ticket_show {
+    display: block;
+}
+
+.sugiana_ticket_header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.55rem;
+}
+
+.sugiana_ticket_header h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+}
+
+.sugiana_ticket_header svg {
+    width: 22px;
+    height: 22px;
+    color: #2E8B57;
+    flex-shrink: 0;
+}
+
+.sugiana_booking_ticket p {
+    font-size: 0.83rem;
+    color: var(--text-dark);
+    line-height: 1.55;
+    margin-bottom: 0.9rem;
+}
+
+.sugiana_ticket_actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sugiana_ticket_actions button.sugiana_btn_secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.52rem 1rem;
+    border-radius: 50px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.sugiana_ticket_actions button.sugiana_btn_secondary svg {
+    width: 14px;
+    height: 14px;
+}
+
+span.sugiana_ticket_copy_msg {
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: var(--accent-mocha);
+}
+
+/* LOCATION MAP CARD */
+section.sugiana_map_section {
+    padding: 1.5rem 6% 5rem 6%;
+}
+
+.sugiana_map_card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-beige);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.sugiana_map_frame {
+    height: 270px;
+    background-color: var(--bg-beige-soft);
+}
+
+.sugiana_map_frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.sugiana_map_info {
+    padding: 1.65rem;
+}
+
+.sugiana_map_info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0.25rem 0 0.7rem 0;
+}
+
+.sugiana_map_info > p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 1.1rem;
+}
+
+ul.sugiana_map_detail_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 1.4rem;
+}
+
+ul.sugiana_map_detail_list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+}
+
+ul.sugiana_map_detail_list svg {
+    width: 17px;
+    height: 17px;
+    color: var(--accent-mocha);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+/* HALAMAN KONTAK END */
+
+
+/* FOOTER START */
+footer.sugiana_footer {
+    background-color: var(--bg-beige);
+    border-top: 1px solid var(--border-beige);
+    padding: 3.5rem 6% 2rem 6%;
+}
+
+.sugiana_footer_container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sugiana_footer_top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-beige);
+}
+
+.sugiana_footer_brand p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 300px;
+    margin-top: 0.85rem;
+}
+
+.sugiana_footer_links_wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+}
+
+.sugiana_footer_col h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.sugiana_footer_col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sugiana_footer_col a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    transition: color 0.25s ease;
+}
+
+.sugiana_footer_col a:hover {
+    color: var(--accent-mocha);
+}
+
+.sugiana_footer_col svg {
+    width: 15px;
+    height: 15px;
+    color: var(--accent-mocha);
+}
+
+.sugiana_footer_bottom {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+/* FOOTER END */
